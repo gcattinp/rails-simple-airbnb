@@ -1,15 +1,46 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.form-control,
+.btn {
+  height: 38px;
+  width: 140px; /* Set a specific height for input and buttons */
+}
+
+.btn {
+  margin-left: 10px; /* Adds space between buttons */
+}
+
+.card {
+  margin-bottom: 50px;
+}
+
+.flat-card-actions {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 20px;
+}
+
+.flex {
+  display: flex; /* This will align child items horizontally */
+  align-items: center; /* This will align child items vertically in the center */
+  justify-content: flex-start; /* This will align child items to the left */
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.ms-3 {
+  margin-left: 1rem;
+}

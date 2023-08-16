@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand" style="padding-left: 10px">Simple Airbnb</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-primary my-2 my-sm-0">Add Flat</button>
+  </form>
+</nav>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>All <%= @flats.length %> flats</p>
+    </div>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem; height: 420px">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title"><%= flat.name %></h5>
+           <p class="card-text"><%= flat.description %></p>
+          <div class="flex">
+            <div class="align-items-center">
+              <i class="fa-solid fa-people-line"></i>
+              <span><%= flat.number_of_guests %></span>
+            </div>
+            <div class="align-items-center ms-3">
+              <i class="fa-solid fa-euro-sign"></i>
+              <span><%= flat.price_per_night %></span>
+            </div>
+          </div>
+        </div>
+        <div class="flat-card-actions">
+        <a href="#">More info</a>
+        <a class="ms-3 text-warning" "href="#">Edit</a>
+        <a class="ms-3 text-danger" href="#">Remove</a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
